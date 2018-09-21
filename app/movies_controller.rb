@@ -65,7 +65,7 @@ def can_find_using_where_clause_and_be_sorted
   # release date descending
   Movie.find_by_sql( <<-sql
     select * from movies
-    where release_date >= 2002
+    where release_date > 2002
     order by release_date desc
     sql
   )
