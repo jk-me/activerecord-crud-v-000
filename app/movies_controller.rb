@@ -106,5 +106,5 @@ def can_destroy_all_items_at_once
     Movie.create(title: "Movie_#{i}")
   end
   m = Movie.find_by_sql("select id from movies")
-  Movie.destroy(m)
+  Movie.destroy(m.flatten)
 end
